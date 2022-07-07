@@ -5,6 +5,7 @@ import { AddAdministratorDto } from 'src/dtos/administrator/add.administrator.dt
 import { Admin, Any, Repository } from 'typeorm';
 import * as crypto from "crypto";
 import { EditAdministratorDto } from 'src/dtos/administrator/edit.administrator.dto';
+import { ApiResponse } from 'src/misc/api.response.class';
 
 @Injectable()
 export class AdministratorService {
@@ -18,12 +19,12 @@ export class AdministratorService {
     }
 
 
-    getById(administratorId: number): Promise<Administrator> { 
+    getById(administratorId: number): Promise<Administrator|ApiResponse> { 
         return this.administrator.findOneBy({administratorId});
     }
 
 
-    add(data:AddAdministratorDto){
+    add(data:AddAdministratorDto):Promise<Administrator | ApiResponse>{
         const crypto = require('crypto')
         const passwordHash = crypto.createHash('sha512');
         passwordHash.update(data.password);
@@ -34,13 +35,25 @@ export class AdministratorService {
         newAdmin.username = data.username;
         newAdmin.passwordHash = passwordHashString;
 
-        return this.administrator.save(newAdmin);
+        return new Promise((resolve)=>{
+            this.administrator.save(newAdmin)
+            .then(data => resolve(data))
+            .catch(error=>{
+                const response:ApiResponse = new ApiResponse("error", -1001);
+                resolve(response);
+            })
+        })
 
     }
 
-    async editById(administratorId:number, data:EditAdministratorDto):Promise<Administrator>{
+    async editById(administratorId:number, data:EditAdministratorDto):Promise<Administrator | ApiResponse>{
         let admin:Administrator = await this.administrator.findOneBy({administratorId});
         
+        if(admin === null){
+            return new Promise((resolve) =>{
+                resolve(new ApiResponse("error", -1002));
+            });
+        }
         const crypto = require('crypto')
         const passwordHash = crypto.createHash('sha512');
         passwordHash.update(data.password);
