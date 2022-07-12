@@ -1,11 +1,20 @@
+ 
 import {
   Column,
   Entity,
   Index,
+  JoinColumn,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
   OneToMany,
   PrimaryGeneratedColumn,
 } from "typeorm";
+import { ArticleFeature } from "./article-feature.entity";
+import { ArticlePrice } from "./article-price.entity";
 import { CartArticle } from "./cart-article.entity";
+import { Category } from "./category.entity";
+import { Feature } from "./feature.entity";
 import { Photo } from "./photo.entity";
 
 @Index("fk_article_category_id", ["categoryId"], {})
@@ -45,6 +54,27 @@ export class Article {
     default: () => "CURRENT_TIMESTAMP",
   })
   createdAt: Date;
+
+  @ManyToOne(() => Category, (category) => category.articles, {
+    onDelete: "CASCADE",
+    onUpdate: "RESTRICT",
+  })
+  @JoinColumn([{ name: "category_id", referencedColumnName: "categoryId" }])
+  category: Category;
+
+  @ManyToMany(type => Feature,feature => feature.articles)
+  @JoinTable({
+    name:"article_feature",
+    joinColumn:{ name:"article_id", referencedColumnName:"articleId"},
+    inverseJoinColumn:{name:"feature_id", referencedColumnName:"featureId"}
+  })
+  features: Feature[];
+
+  @OneToMany(() => ArticleFeature, (articleFeature) => articleFeature.article)
+  articleFeatures: ArticleFeature[];
+
+  @OneToMany(() => ArticlePrice, (articlePrice) => articlePrice.article)
+  articlePrices: ArticlePrice[];
 
   @OneToMany(() => CartArticle, (cartArticle) => cartArticle.article)
   cartArticles: CartArticle[];

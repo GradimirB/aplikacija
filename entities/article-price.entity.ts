@@ -1,4 +1,5 @@
-import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Article } from "./article.entity";
 
 @Index("fk_article_price_article_id", ["articleId"], {})
 @Entity("article_price", { schema: "aplikacija" })
@@ -27,4 +28,11 @@ export class ArticlePrice {
     default: () => "CURRENT_TIMESTAMP",
   })
   createdAt: Date;
+
+  @ManyToOne(() => Article, (article) => article.articlePrices, {
+    onDelete: "RESTRICT",
+    onUpdate: "CASCADE",
+  })
+  @JoinColumn([{ name: "article_id", referencedColumnName: "articleId" }])
+  article: Article;
 }

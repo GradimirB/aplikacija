@@ -23,6 +23,18 @@ export class AdministratorService {
         return this.administrator.findOneBy({administratorId});
     }
 
+    async getByUsername(username:string):Promise<Administrator | null>{
+        const admin = await this.administrator.findOneBy({
+            username:username
+        });
+
+        if(admin) {
+            return admin;
+        }
+
+        return null;
+    }
+
 
     add(data:AddAdministratorDto):Promise<Administrator | ApiResponse>{
         const crypto = require('crypto')

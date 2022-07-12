@@ -6,6 +6,7 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from "typeorm";
+import { Article } from "./article.entity";
 import { Feature } from "./feature.entity";
 
 @Index("uq_article_feature_article_id_feature_id", ["articleId", "featureId"], {
@@ -30,6 +31,13 @@ export class ArticleFeature {
   @Column("varchar", { name: "value", length: 255, default: () => "'0'" })
   value: string;
 
+  @ManyToOne(() => Article, (article) => article.articleFeatures, {
+    onDelete: "RESTRICT",
+    onUpdate: "CASCADE",
+  })
+  @JoinColumn([{ name: "article_id", referencedColumnName: "articleId" }])
+  article: Article;
+
   @ManyToOne(() => Feature, (feature) => feature.articleFeatures, {
     onDelete: "RESTRICT",
     onUpdate: "CASCADE",
@@ -37,3 +45,4 @@ export class ArticleFeature {
   @JoinColumn([{ name: "feature_id", referencedColumnName: "featureId" }])
   feature: Feature;
 }
+

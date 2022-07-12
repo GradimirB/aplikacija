@@ -44,4 +44,5 @@ export class Category {
 
   @OneToMany(() => Feature, (feature) => feature.category)
   features: Feature[];
+  articles: any;
 }
