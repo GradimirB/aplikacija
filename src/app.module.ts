@@ -22,6 +22,7 @@ import { ArticleController } from './controllers/api/article.contoller';
 import { ArticleService } from './services/article/article.service';
 import { AuthController } from './controllers/api/auth.controller';
 import { AuthMiddleware } from './middleware/auth.middleware';
+import { PhotoService } from './services/photo/photo.service';
 
 @Module({
   imports: [
@@ -48,11 +49,17 @@ import { AuthMiddleware } from './middleware/auth.middleware';
     
     }),
     TypeOrmModule.forFeature([
-      Administrator,
-      Category,
-      Article,
-      ArticlePrice,
-      ArticleFeature,
+        Administrator,
+        ArticleFeature,
+        ArticlePrice,
+        Article,
+        CartArticle,
+        Cart,
+        Category,
+        Feature,
+        Order,
+        Photo,
+        User,
     ])
   ],
   controllers: [AppController,
@@ -68,6 +75,7 @@ import { AuthMiddleware } from './middleware/auth.middleware';
     AdministratorService,
     CategoryService,
     ArticleService,
+    PhotoService,
   ],
 
   exports:[
