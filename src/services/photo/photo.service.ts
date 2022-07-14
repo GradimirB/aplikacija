@@ -1,11 +1,14 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { TypeOrmCrudService } from "@nestjsx/crud-typeorm";
-import { Photo } from "entities/photo.entity";
+import { Photo } from "src/entities/photo.entity";
 import { Repository } from "typeorm";
 
 @Injectable()
 export class PhotoService extends TypeOrmCrudService<Photo>{
+    deleteById(photoId: number) {
+        throw new Error("Method not implemented.");
+    }
     constructor(
         @InjectRepository(Photo)
         private readonly photo: Repository<Photo>,
