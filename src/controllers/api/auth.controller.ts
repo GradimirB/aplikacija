@@ -4,13 +4,14 @@ import { LoginAdministratorDto } from "src/dtos/administrator/login.administrato
 import { ApiResponse } from "src/misc/api.response.class";
 import { AdministratorService } from "src/services/administrator/administrator.service";
 import * as crypto from "crypto";
-import { LoginInfoAdministratorDto } from "src/dtos/administrator/login.info.administrator.dto";
+import {  LoginInfoDto } from "src/dtos/auth/login.info.dto";
 import * as jwt from 'jsonwebtoken';
-import { JwtDataAdministratorDto } from "src/dtos/administrator/jwt.data.administrator";
+import { JwtDataDto } from "src/dtos/auth/jwt.data.dto";
 import {Request} from "express"
 import { jwtSecret } from "config.ts/jwt.secret";
 import { userRegistrationDto } from "src/dtos/user/user.registration.dto";
 import { UserService } from "src/services/user/user.service";
+import { LoginUserDto } from "src/dtos/user/login.user.dto";
 
 @Controller('auth')
 export class AuthController{
@@ -18,8 +19,8 @@ export class AuthController{
                 public userService:UserService)
     {}
 
-    @Post('login')
-    async doLogin(@Body() data:LoginAdministratorDto, @Req() req:Request ):Promise<LoginInfoAdministratorDto|ApiResponse>{
+    @Post('administrator/login')
+    async doAdministratorLogin(@Body() data:LoginAdministratorDto, @Req() req:Request ):Promise<LoginInfoDto|ApiResponse>{
         const administrator = await this.administratorService.getByUsername(data.username);
 
         if(!administrator){
@@ -34,9 +35,11 @@ export class AuthController{
             return new Promise(resolve =>resolve(new ApiResponse('error',-3002)))
         }
 
-        const jwtData = new JwtDataAdministratorDto();
-        jwtData.administratorId = administrator.administratorId;
-        jwtData.username = administrator.username;
+        const jwtData = new JwtDataDto();
+        jwtData.role = "administator";
+        jwtData.id = administrator.administratorId;
+        jwtData.identity = administrator.username;
+
         let sada = new Date();
         sada.setDate(sada.getDate()+14);
         const istekTimestamp = sada.getTime() / 1000;
@@ -46,7 +49,7 @@ export class AuthController{
         jwtData.ua = req.headers["user-agent"];
 
         let token:string = jwt.sign(jwtData.toPlainObject()  , jwtSecret);
-        const responseObject = new LoginInfoAdministratorDto(
+        const responseObject = new LoginInfoDto(
             administrator.administratorId,
             administrator.username,
             token
@@ -59,6 +62,45 @@ export class AuthController{
     async userRegister(@Body() data:userRegistrationDto)
     {
         return await this.userService.register(data);
+    }
+
+    @Post('user/login')
+    async doUserLogin(@Body() data:LoginUserDto, @Req() req:Request ):Promise<LoginInfoDto|ApiResponse>{
+        const user = await this.userService.getByEmail(data.email);
+
+        if(!user){
+            return new Promise(resolve => resolve(new ApiResponse('error',-3001)))
+        }
+
+        const passwordHash = crypto.createHash('sha512');
+        passwordHash.update(data.password);
+        const passwordHashString = passwordHash.digest('hex').toUpperCase();
+
+        if(user.passwordHash !== passwordHashString){
+            return new Promise(resolve =>resolve(new ApiResponse('error',-3002)))
+        }
+
+        const jwtData = new JwtDataDto();
+        jwtData.role = "user";
+        jwtData.id = user.userId;
+        jwtData.identity = user.email;
+
+        let sada = new Date();
+        sada.setDate(sada.getDate()+14);
+        const istekTimestamp = sada.getTime() / 1000;
+        jwtData.exp = istekTimestamp;
+
+        jwtData.ip = req.ip.toString();
+        jwtData.ua = req.headers["user-agent"];
+
+        let token:string = jwt.sign(jwtData.toPlainObject()  , jwtSecret);
+        const responseObject = new LoginInfoDto(
+            user.userId,
+            user.email,
+            token
+        );
+
+        return new Promise(resolve => resolve(responseObject));
     }
 
 

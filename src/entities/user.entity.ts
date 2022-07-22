@@ -27,7 +27,7 @@ export class User {
     length: 128,
     default: () => "'0'",
   })
-  passwrodHash: string;
+  passwordHash: string;
 
   @Column("varchar", { name: "forename", length: 64, default: () => "'0'" })
   forename: string;
