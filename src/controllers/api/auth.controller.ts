@@ -1,4 +1,4 @@
-import { Body, Controller, Post, Req } from "@nestjs/common";
+import { Body, Controller, Post, Put, Req } from "@nestjs/common";
 import { resolve } from "path";
 import { LoginAdministratorDto } from "src/dtos/administrator/login.administrator.dto";
 import { ApiResponse } from "src/misc/api.response.class";
@@ -9,10 +9,13 @@ import * as jwt from 'jsonwebtoken';
 import { JwtDataAdministratorDto } from "src/dtos/administrator/jwt.data.administrator";
 import {Request} from "express"
 import { jwtSecret } from "config.ts/jwt.secret";
+import { userRegistrationDto } from "src/dtos/user/user.registration.dto";
+import { UserService } from "src/services/user/user.service";
 
 @Controller('auth')
 export class AuthController{
-    constructor(public administratorService:AdministratorService)
+    constructor(public administratorService:AdministratorService,
+                public userService:UserService)
     {}
 
     @Post('login')
@@ -52,8 +55,13 @@ export class AuthController{
         return new Promise(resolve => resolve(responseObject));
     }
 
+    @Put('user/register')
+    async userRegister(@Body() data:userRegistrationDto)
+    {
+        return await this.userService.register(data);
+    }
+
+
 }
 
-function req() {
-    throw new Error("Function not implemented.");
-}
+

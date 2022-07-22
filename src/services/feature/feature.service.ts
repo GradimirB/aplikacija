@@ -9,8 +9,8 @@ import { Repository } from "typeorm";
 export class FeatureService extends TypeOrmCrudService<Feature>{
     constructor(
         @InjectRepository(Feature)
-        private readonly category:Repository<Feature>){
-        super(category);
+        private readonly feature:Repository<Feature>){
+        super(feature);
     }
 
     
