@@ -1,0 +1,1975 @@
+{
+	"info": {
+		"_postman_id": "e0ed26c5-efff-4b04-b317-daafc08aa2a8",
+		"name": "Veb servis aplikacije",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Administrator",
+			"item": [
+				{
+					"name": "Get all adminstrators",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/administrator/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"administrator",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all adminstrators",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/administrator/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"administrator",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2240"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8c0-+2yd+giPD3ktl+9V6bp5AOGT/2g\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Jul 2022 23:40:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"administratorId\": 1,\n        \"username\": \"milantex\",\n        \"passwordHash\": \"BD39EA66270E78AA56671726669D138C64AD1C56BED0970901A340209C9B4EC18FBBFAFFB88AA8D526E5695F063A41A2960128B71318D7ED31D3B123F280DB95\"\n    },\n    {\n        \"administratorId\": 2,\n        \"username\": \"test_user\",\n        \"passwordHash\": \"BD39EA66270E78AA56671726669D138C64AD1C56BED0970901A340209C9B4EC18FBBFAFFB88AA8D526E5695F063A41A2960128B71318D7ED31D3B123F280DB95\"\n    },\n    {\n        \"administratorId\": 3,\n        \"username\": \"pperic\",\n        \"passwordHash\": \"BD39EA66270E78AA56671726669D138C64AD1C56BED0970901A340209C9B4EC18FBBFAFFB88AA8D526E5695F063A41A2960128B71318D7ED31D3B123F280DB95\"\n    },\n    {\n        \"administratorId\": 6,\n        \"username\": \"mmilic\",\n        \"passwordHash\": \"CF83E1357EEFB8BDF1542850D66D8007D620E4050B5715DC83F4A921D36CE9CE47D0D13C5D85F2B0FF8318D2877EEC2F63B931BD47417A81A538327AF927DA3E\"\n    },\n    {\n        \"administratorId\": 8,\n        \"username\": \"admin\",\n        \"passwordHash\": \"CF83E1357EEFB8BDF1542850D66D8007D620E4050B5715DC83F4A921D36CE9CE47D0D13C5D85F2B0FF8318D2877EEC2F63B931BD47417A81A538327AF927DA3E\"\n    },\n    {\n        \"administratorId\": 9,\n        \"username\": \"admin22\",\n        \"passwordHash\": \"CF83E1357EEFB8BDF1542850D66D8007D620E4050B5715DC83F4A921D36CE9CE47D0D13C5D85F2B0FF8318D2877EEC2F63B931BD47417A81A538327AF927DA3E\"\n    },\n    {\n        \"administratorId\": 10,\n        \"username\": \"admin144\",\n        \"passwordHash\": \"$2b$10$t/VCk8wKWFN20i75ghbWIeblwllDN2XT2ObG25atsh.ZTvAS8K0FS\"\n    },\n    {\n        \"administratorId\": 11,\n        \"username\": \"admin14334\",\n        \"passwordHash\": \"cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e\"\n    },\n    {\n        \"administratorId\": 12,\n        \"username\": \"admin1432443sdasda34\",\n        \"passwordHash\": \"0\"\n    },\n    {\n        \"administratorId\": 13,\n        \"username\": \"asda22\",\n        \"passwordHash\": \"0\"\n    },\n    {\n        \"administratorId\": 14,\n        \"username\": \"aasdasda22\",\n        \"passwordHash\": \"0\"\n    },\n    {\n        \"administratorId\": 15,\n        \"username\": \"aasdasadadasdadasda22\",\n        \"passwordHash\": \"CF83E1357EEFB8BDF1542850D66D8007D620E4050B5715DC83F4A921D36CE9CE47D0D13C5D85F2B0FF8318D2877EEC2F63B931BD47417A81A538327AF927DA3E\"\n    },\n    {\n        \"administratorId\": 16,\n        \"username\": \"eawewew\",\n        \"passwordHash\": \"4D31CFFC79BE00C8C59A1337B969A1E16373004A042172FF73D5A662FF7138163AED2779B866B425311B59E284C70064A7D293EEDC768C290D8C4B42EC52D780\"\n    },\n    {\n        \"administratorId\": 18,\n        \"username\": \"eawewessw\",\n        \"passwordHash\": \"2489E96B2EB2CAB0FBAEC0DC25EC828AD1A09A5957A874B8D39BCB6E1D38581827E9F37F999F3F02A32C8738DFBEEAE25D11D09BC52FE6DE3B617E17B2F797F1\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get a single administrator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/administrator/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"administrator",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a single administrator",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/administrator/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"administrator",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "189"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bd-4b86YI6zIFA34YcXylGNGCv2X5A\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Jul 2022 23:43:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"administratorId\": 1,\n    \"username\": \"milantex\",\n    \"passwordHash\": \"BD39EA66270E78AA56671726669D138C64AD1C56BED0970901A340209C9B4EC18FBBFAFFB88AA8D526E5695F063A41A2960128B71318D7ED31D3B123F280DB95\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add a new administrator",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin11\",\r\n    \"password\":\"admin11\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/administrator/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"administrator",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Succsess",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"ppericccc\",\r\n    \"password\":\"NekatajnaPoruka\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/administrator/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"administrator",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "191"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bf-qBr8MuzjjWwhIhxvrKR9fM96ASw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Jul 2022 23:47:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"ppericccc\",\n    \"passwordHash\": \"027BDEA8ACA6C94592CE4D9B8521CFCC2C2913D22B1098B90FE3E722A657F210A34604F974A7C5D02EFF7D7315894FBAEE083A0F12973F22994DF7D9BDA10553\",\n    \"administratorId\": 19\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit an administrator",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"novalozinka\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/administrator/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"administrator",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit an administrator",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"novalozinka\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/administrator/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"administrator",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "189"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bd-u8d7bMlqYfMkWEJOZDiHejrjwJs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Jul 2022 00:03:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"administratorId\": 1,\n    \"username\": \"milantex\",\n    \"passwordHash\": \"5CA4BB5D86D94C4F8B6F13F79852423673FC8DF3F4271A82848FBD7C2BAFE5B92F1A65CB7662EA1A63FFB231E28E936AD1510F410275B33F3FFAB8DE0A156D4F\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit a non-existing administrator",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"somethinggg\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/administrator/555",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"administrator",
+								"555"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit a non-existing administrator",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"somethinggg\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/administrator/555",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"administrator",
+										"555"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-TohoSz0THfgyH4V7rCdfcfXcq54\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Jul 2022 00:20:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -1002,\n    \"message\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a single non-existing administrator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/administrator/650/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"administrator",
+								"650",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Article",
+			"item": [
+				{
+					"name": "createFull",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"AMCE HDD22 2TB\",\r\n    \"categoryId\":5,\r\n    \"excerpt\":\"Neki tekst itako\",\r\n    \"description\":\"neki duzi tekst o proizvodu\",\r\n    \"price\":75.55,\r\n    \"features\":[\r\n        {\r\n            \"featureId\":1,\r\n            \"value\":\"1TB\"\r\n        },\r\n        {\r\n            \"featureId\":3,\r\n            \"value\":\"SSD\"\r\n        }\r\n\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/article/createFull/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"createFull",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createFull",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"AMCE HDD22 2TB\",\r\n    \"categoryId\":5,\r\n    \"excerpt\":\"Neki tekst itako\",\r\n    \"description\":\"neki duzi tekst o proizvodu\",\r\n    \"price\":75.55,\r\n    \"features\":[\r\n        {\r\n            \"featureId\":1,\r\n            \"value\":\"1TB\"\r\n        },\r\n        {\r\n            \"featureId\":3,\r\n            \"value\":\"SSD\"\r\n        }\r\n\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/article/createFull/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										"createFull",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "690"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b2-0l8JnaCpcre6VpcxDrX3vJ6+HoM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Jul 2022 18:41:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"articleId\": 35,\n    \"name\": \"AMCE HDD22 2TB\",\n    \"categoryId\": 5,\n    \"excerpt\": \"Neki tekst itako\",\n    \"description\": \"neki duzi tekst o proizvodu\",\n    \"status\": \"available\",\n    \"isPromoted\": 0,\n    \"createdAt\": \"2022-07-12T18:41:20.000Z\",\n    \"category\": {\n        \"categoryId\": 5,\n        \"name\": \"Hard diskovi\",\n        \"imagePath\": \"assets/pc/memory/hdd.jpg\",\n        \"parentCategoryId\": 4\n    },\n    \"articleFeatures\": [\n        {\n            \"articleFeatureId\": 8,\n            \"articleId\": 35,\n            \"featureId\": 1,\n            \"value\": \"1TB\"\n        },\n        {\n            \"articleFeatureId\": 9,\n            \"articleId\": 35,\n            \"featureId\": 3,\n            \"value\": \"SSD\"\n        }\n    ],\n    \"features\": [\n        {\n            \"featureId\": 1,\n            \"name\": \"Kapacitet\",\n            \"categoryId\": 5\n        },\n        {\n            \"featureId\": 3,\n            \"name\": \"Tehnologija\",\n            \"categoryId\": 5\n        }\n    ],\n    \"articlePrices\": [\n        {\n            \"articlePriceId\": 36,\n            \"articleId\": 35,\n            \"price\": \"75.55\",\n            \"createdAt\": \"2022-07-12T18:41:20.000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Upload article photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/Gradimir/Desktop/hard.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/article/5/uploadPhoto/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"5",
+								"uploadPhoto",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Upload article photo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/Gradimir/Desktop/harddisk.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/article/4/uploadPhoto/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										"4",
+										"uploadPhoto",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "73"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"49-EWoZ25XExklwMpGILro+lE2i1FM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jul 2022 19:27:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"articleId\": 4,\n    \"imagePath\": \"2022713-1351438274-harddisk.jpg\",\n    \"photoId\": 5\n}"
+						},
+						{
+							"name": "Upload article photo -bad file extension",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/Gradimir/AppData/Local/Discord/Update.exe"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/article/5/uploadPhoto/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										"5",
+										"uploadPhoto",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "69"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"45-/1BctOZfI9HUiikyGHz7sO4T6hY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jul 2022 21:04:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -4002,\n    \"message\": \"Bad file extension!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a single article",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/article/5/Photo/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"5",
+								"Photo",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a single article photo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/article/4/deletePhoto/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"4",
+								"deletePhoto",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit a single article without editing features",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ACME HD11 1024GB\",\r\n    \"categoryId\":\"5\",\r\n    \"excerpt\":\"Neki kratak tekst 2\",\r\n    \"description\":\"najduzi tekst do sada o nekom proizvodu\",\r\n    \"status\":\"visible\",\r\n    \"isPromoted\":1,\r\n    \"price\":\"57.77\",\r\n    \"features\":null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/article/17/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"17",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit a single article without editing features",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"ACME HD11 1024GB\",\r\n    \"categoryId\":\"5\",\r\n    \"excerpt\":\"Neki kratak tekst 2\",\r\n    \"description\":\"najduzi tekst do sada o nekom proizvodu\",\r\n    \"status\":\"visible\",\r\n    \"isPromoted\":1,\r\n    \"price\":\"57.77\",\r\n    \"features\":null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/article/17/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										"17",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "888"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"378-18CibZNP4PvFd0p7fT7axWU610w\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Jul 2022 20:17:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"articleId\": 17,\n    \"name\": \"ACME HD11 1024GB\",\n    \"categoryId\": 5,\n    \"excerpt\": \"Neki kratak tekst 2\",\n    \"description\": \"najduzi tekst do sada o nekom proizvodu\",\n    \"status\": \"visible\",\n    \"isPromoted\": 1,\n    \"createdAt\": \"2021-07-19T23:48:57.000Z\",\n    \"category\": {\n        \"categoryId\": 5,\n        \"name\": \"Hard diskovi\",\n        \"imagePath\": \"assets/pc/memory/hdd.jpg\",\n        \"parentCategoryId\": 4\n    },\n    \"articleFeatures\": [\n        {\n            \"articleFeatureId\": 4,\n            \"articleId\": 17,\n            \"featureId\": 1,\n            \"value\": \"1TB\"\n        },\n        {\n            \"articleFeatureId\": 5,\n            \"articleId\": 17,\n            \"featureId\": 3,\n            \"value\": \"SSD\"\n        }\n    ],\n    \"features\": [\n        {\n            \"featureId\": 1,\n            \"name\": \"Kapacitet\",\n            \"categoryId\": 5\n        },\n        {\n            \"featureId\": 3,\n            \"name\": \"Tehnologija\",\n            \"categoryId\": 5\n        }\n    ],\n    \"articlePrices\": [\n        {\n            \"articlePriceId\": 2,\n            \"articleId\": 17,\n            \"price\": \"56.89\",\n            \"createdAt\": \"2021-07-19T23:48:57.000Z\"\n        },\n        {\n            \"articlePriceId\": 37,\n            \"articleId\": 17,\n            \"price\": \"57.11\",\n            \"createdAt\": \"2022-07-22T19:34:34.000Z\"\n        },\n        {\n            \"articlePriceId\": 38,\n            \"articleId\": 17,\n            \"price\": \"57.77\",\n            \"createdAt\": \"2022-07-22T20:17:54.000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit a single article withediting features",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ACME HD11 1024GB\",\r\n    \"categoryId\":\"5\",\r\n    \"excerpt\":\"Neki kratak tekst 2\",\r\n    \"description\":\"najduzi tekst do sada o nekom proizvodu\",\r\n    \"status\":\"visible\",\r\n    \"isPromoted\":1,\r\n    \"price\":\"57.77\",\r\n    \"features\":[\r\n        {\r\n            \"featureId\":1,\r\n            \"value\":\"1024GB\"\r\n        },\r\n        {\r\n            \"featureId\":2,\r\n            \"value\":\"SATA 3.0\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/article/17/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"17",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit a single article with editing features",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"ACME HD11 1024GB\",\r\n    \"categoryId\":\"5\",\r\n    \"excerpt\":\"Neki kratak tekst 2\",\r\n    \"description\":\"najduzi tekst do sada o nekom proizvodu\",\r\n    \"status\":\"visible\",\r\n    \"isPromoted\":1,\r\n    \"price\":\"57.77\",\r\n    \"features\":[\r\n        {\r\n            \"featureId\":1,\r\n            \"value\":\"1024GB\"\r\n        },\r\n        {\r\n            \"featureId\":2,\r\n            \"value\":\"SATA 3.0\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/article/17/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										"17",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "890"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37a-UsBH8WsuQLrHWGbyeRU2ALsL/YA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Jul 2022 20:29:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"articleId\": 17,\n    \"name\": \"ACME HD11 1024GB\",\n    \"categoryId\": 5,\n    \"excerpt\": \"Neki kratak tekst 2\",\n    \"description\": \"najduzi tekst do sada o nekom proizvodu\",\n    \"status\": \"visible\",\n    \"isPromoted\": 1,\n    \"createdAt\": \"2021-07-19T23:48:57.000Z\",\n    \"category\": {\n        \"categoryId\": 5,\n        \"name\": \"Hard diskovi\",\n        \"imagePath\": \"assets/pc/memory/hdd.jpg\",\n        \"parentCategoryId\": 4\n    },\n    \"articleFeatures\": [\n        {\n            \"articleFeatureId\": 12,\n            \"articleId\": 17,\n            \"featureId\": 1,\n            \"value\": \"1024GB\"\n        },\n        {\n            \"articleFeatureId\": 13,\n            \"articleId\": 17,\n            \"featureId\": 2,\n            \"value\": \"SATA 3.0\"\n        }\n    ],\n    \"features\": [\n        {\n            \"featureId\": 1,\n            \"name\": \"Kapacitet\",\n            \"categoryId\": 5\n        },\n        {\n            \"featureId\": 2,\n            \"name\": \"Tip\",\n            \"categoryId\": 5\n        }\n    ],\n    \"articlePrices\": [\n        {\n            \"articlePriceId\": 2,\n            \"articleId\": 17,\n            \"price\": \"56.89\",\n            \"createdAt\": \"2021-07-19T23:48:57.000Z\"\n        },\n        {\n            \"articlePriceId\": 37,\n            \"articleId\": 17,\n            \"price\": \"57.11\",\n            \"createdAt\": \"2022-07-22T19:34:34.000Z\"\n        },\n        {\n            \"articlePriceId\": 38,\n            \"articleId\": 17,\n            \"price\": \"57.77\",\n            \"createdAt\": \"2022-07-22T20:17:54.000Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbmlzdHJhdG9ySWQiOjI0LCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjU5MDM3Mjc0LjcxMSwiaXAiOiI6OjEiLCJ1YSI6IlBvc3RtYW5SdW50aW1lLzcuMjguNCIsImlhdCI6MTY1NzgyNzY3NH0.TQQeGH_2FjY_a0X_onLdqWluZ05Xsjb1oPty0Pk4AvM",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Administator Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin11\",\r\n    \"password\":\"admin11\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/administrator/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"administrator",
+								"login",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login -when the administrator exists and the password is correct",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/login/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "292"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"124-Q9KGdGl0GU1xiH7tVTPud0qiEVs\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Jul 2022 21:10:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"administratorId\": 24,\n    \"username\": \"admin\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbmlzdHJhdG9ySWQiOjI0LCJ1c2VybmFtZSI6ImFkbWluIiwiZXh0IjoxNjU4ODY5ODU4LjA4MiwiaXAiOiI6OjEiLCJ1YSI6IlBvc3RtYW5SdW50aW1lLzcuMjguNCIsImlhdCI6MTY1NzY2MDI1OH0.Wexzunk3evb9U8BDN2u6nCk667F4I1EHy9xukygEKwM\"\n}"
+						},
+						{
+							"name": "Login- when the administrator exists, but the password is not correct",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin222\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/login/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-yGnd1fUn+KRemOJUJKfIJoExxS4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Jul 2022 21:13:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -3002,\n    \"message\": null\n}"
+						},
+						{
+							"name": "Login- when the administrator does not exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"admin444\",\r\n    \"password\":\"admin\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/login/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-jVzHjGg0W81AgoBNOOnaoLkouLY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Jul 2022 21:14:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -3001,\n    \"message\": null\n}"
+						},
+						{
+							"name": "Administator Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/administrator/login/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"administrator",
+										"login",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "262"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"106-5hzBMBqav0PSJKRipOiGu7sRDJ4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Jul 2022 22:24:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 24,\n    \"identity\": \"admin\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsImlkZW50aXR5IjoiYWRtaW4iLCJleHAiOjE2NTk3MzgyNzQuOTY2LCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC40IiwiaWF0IjoxNjU4NTI4Njc0fQ.YBsd8-SGd8dF2fW8pH5XmlnFWdHOPF961pI1v90FRTw\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@testt22.rs\",\r\n    \"password\":\"abcc\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/user/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"user",
+								"login",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"test@testt22.rs\",\r\n    \"password\":\"abcc\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/user/login/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"user",
+										"login",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "283"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11b-5qHJ+b6YbRk3J+dhKJ5GicyMd3I\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Jul 2022 22:27:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"identity\": \"test@testt22.rs\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWRlbnRpdHkiOiJ0ZXN0QHRlc3R0MjIucnMiLCJleHAiOjE2NTk3Mzg0NjUuMzQ0LCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC40IiwiaWF0IjoxNjU4NTI4ODY1fQ.qoXF8YAEX9JUZn4SiGhDJhEQE_xwxYgjaoSyqsa2id4\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register a new user account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@testt22.rs\",\r\n    \"password\":\"abcc\",\r\n    \"forename\":\"pera\",\r\n    \"surname\":\"peric\",\r\n    \"phoneNumber\":\"+3812324325\",\r\n    \"postalAddress\":\"Nepoznata adresa bb,Glavna ulica\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/user/register/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"user",
+								"register",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register a new user account",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"test@testt22.rs\",\r\n    \"password\":\"abcc\",\r\n    \"forename\":\"pera\",\r\n    \"surname\":\"peric\",\r\n    \"phoneNumber\":\"+3812324325\",\r\n    \"postalAddress\":\"Nepoznata adresa bb,Glavna ulica\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/user/register/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"user",
+										"register",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "86"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"56-VuqYQySskYqvQH7gh7bQmiDrU0M\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Jul 2022 21:11:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -6001,\n    \"message\": \"This user account cannot be created.\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Feature",
+			"item": [
+				{
+					"name": "Get all features",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbmlzdHJhdG9ySWQiOjI0LCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjU5MDM3Mjc0LjcxMSwiaXAiOiI6OjEiLCJ1YSI6IlBvc3RtYW5SdW50aW1lLzcuMjguNCIsImlhdCI6MTY1NzgyNzY3NH0.TQQeGH_2FjY_a0X_onLdqWluZ05Xsjb1oPty0Pk4AvM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/feature/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"feature",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all features",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/feature/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"feature",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "477"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1dd-LB9FKtuNIY9fHZ332UQINVlJBS8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jul 2022 21:54:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"featureId\": 1,\n        \"name\": \"Kapacitet\",\n        \"categoryId\": 5,\n        \"category\": {\n            \"categoryId\": 5,\n            \"name\": \"Hard diskovi\",\n            \"imagePath\": \"assets/pc/memory/hdd.jpg\",\n            \"parentCategoryId\": 4\n        }\n    },\n    {\n        \"featureId\": 3,\n        \"name\": \"Tehnologija\",\n        \"categoryId\": 5,\n        \"category\": {\n            \"categoryId\": 5,\n            \"name\": \"Hard diskovi\",\n            \"imagePath\": \"assets/pc/memory/hdd.jpg\",\n            \"parentCategoryId\": 4\n        }\n    },\n    {\n        \"featureId\": 2,\n        \"name\": \"Tip\",\n        \"categoryId\": 5,\n        \"category\": {\n            \"categoryId\": 5,\n            \"name\": \"Hard diskovi\",\n            \"imagePath\": \"assets/pc/memory/hdd.jpg\",\n            \"parentCategoryId\": 4\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get a single feature",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/feature/2/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"feature",
+								"2",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a single feature",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/feature/2/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"feature",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "153"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"99-Y3Dw+HEmku4MaE10ND6xwCBafYs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jul 2022 21:57:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"featureId\": 2,\n    \"name\": \"Tip\",\n    \"categoryId\": 5,\n    \"category\": {\n        \"categoryId\": 5,\n        \"name\": \"Hard diskovi\",\n        \"imagePath\": \"assets/pc/memory/hdd.jpg\",\n        \"parentCategoryId\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add a new feature",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Snagaaa\",\r\n    \"categoryId\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/feature/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"feature",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit a single feature",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"napon\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/feature/5/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"feature",
+								"5",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit a single feature",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"napon\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/feature/5/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"feature",
+										"5",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "154"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9a-15ZHRfhznerJV/Zn6iBC1UBXQks\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Jul 2022 22:03:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"featureId\": 5,\n    \"name\": \"napon\",\n    \"categoryId\": 2,\n    \"category\": {\n        \"categoryId\": 2,\n        \"name\": \"Kucna elektronika\",\n        \"imagePath\": \"assets/home.jpg\",\n        \"parentCategoryId\": null\n    }\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbmlzdHJhdG9ySWQiOjI0LCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjU5MDM3Mjc0LjcxMSwiaXAiOiI6OjEiLCJ1YSI6IlBvc3RtYW5SdW50aW1lLzcuMjguNCIsImlhdCI6MTY1NzgyNzY3NH0.TQQeGH_2FjY_a0X_onLdqWluZ05Xsjb1oPty0Pk4AvM",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoxLCJpZGVudGl0eSI6InRlc3RAdGVzdHQyMi5ycyIsImV4cCI6MTY2MDI2MzQ3OS4wNzQsImlwIjoiOjoxIiwidWEiOiJQb3N0bWFuUnVudGltZS83LjI4LjQiLCJpYXQiOjE2NTkwNTM4Nzl9.N2no_VDDF_8-FH9wx5i1xkQeSqonCPaW54_0bNBRP_Y",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
