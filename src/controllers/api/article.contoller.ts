@@ -55,7 +55,22 @@ const fileType = require("file-type");
     },
 
     routes:{
-        exclude: ['updateOneBase','replaceOneBase','deleteOneBase'],
+        only:[
+            'getManyBase',
+            'getOneBase',
+        ],
+        getOneBase:{
+            decorators:[
+                UseGuards(RoleCheckedGuard),
+                AllowToRoles('administrator','user')
+            ],
+        },
+        getManyBase:{
+            decorators:[
+                UseGuards(RoleCheckedGuard),
+                AllowToRoles('administrator','user')
+            ],
+        },
     }
 })
 export class ArticleController{
@@ -65,7 +80,7 @@ export class ArticleController{
     }
 
     
-    @Post('createFull')
+    @Post()
     @UseGuards(RoleCheckedGuard)
     @AllowToRoles('administrator')
     createFullArticle(@Body() data:AddArticleDto){
