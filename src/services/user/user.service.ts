@@ -1,10 +1,10 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { TypeOrmCrudService } from "@nestjsx/crud-typeorm";
-import { userRegistrationDto } from "src/dtos/user/user.registration.dto";
+import { UserRegistrationDto } from "src/dtos/user/user.registration.dto";
 import { User } from "src/entities/user.entity";
 import { ApiResponse } from "src/misc/api.response.class";
-import { Repository } from "typeorm";
+import { Any, Repository } from "typeorm";
 import * as crypto from 'crypto';
  
 
@@ -16,7 +16,7 @@ export class UserService extends TypeOrmCrudService<User>{
         super(user);
     }
 
-    async register(data:userRegistrationDto):Promise<User|ApiResponse>{
+    async register(data:UserRegistrationDto):Promise<User|ApiResponse>{
         
         const passwordHash = crypto.createHash('sha512');
         passwordHash.update(data.password);
@@ -42,7 +42,7 @@ export class UserService extends TypeOrmCrudService<User>{
     }
 
     async getById(id){
-        return await this.user.findOne(id);
+        return await this.user.findBy(id);
     }
 
     async getByEmail(email:string):Promise<User | null>{

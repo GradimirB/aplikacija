@@ -9,7 +9,7 @@ import * as jwt from 'jsonwebtoken';
 import { JwtDataDto } from "src/dtos/auth/jwt.data.dto";
 import {Request} from "express"
 import { jwtSecret } from "config.ts/jwt.secret";
-import { userRegistrationDto } from "src/dtos/user/user.registration.dto";
+import { UserRegistrationDto } from "src/dtos/user/user.registration.dto";
 import { UserService } from "src/services/user/user.service";
 import { LoginUserDto } from "src/dtos/user/login.user.dto";
 
@@ -20,7 +20,7 @@ export class AuthController{
     {}
 
     @Post('administrator/login')
-    async doAdministratorLogin(@Body() data:LoginAdministratorDto, @Req() req:Request ):Promise<LoginInfoDto|ApiResponse>{
+    async doAdministratorLogin(@Body() data:LoginAdministratorDto, @Req() req:Request):Promise<LoginInfoDto|ApiResponse>{
         const administrator = await this.administratorService.getByUsername(data.username);
 
         if(!administrator){
@@ -36,9 +36,10 @@ export class AuthController{
         }
 
         const jwtData = new JwtDataDto();
-        jwtData.role = "administator";
+        jwtData.role = "administrator";
         jwtData.id = administrator.administratorId;
         jwtData.identity = administrator.username;
+        console.log(jwtData.role)
 
         let sada = new Date();
         sada.setDate(sada.getDate()+14);
@@ -48,7 +49,7 @@ export class AuthController{
         jwtData.ip = req.ip.toString();
         jwtData.ua = req.headers["user-agent"];
 
-        let token:string = jwt.sign(jwtData.toPlainObject()  , jwtSecret);
+        let token:string = jwt.sign(jwtData.toPlainObject(), jwtSecret);
         const responseObject = new LoginInfoDto(
             administrator.administratorId,
             administrator.username,
@@ -59,7 +60,7 @@ export class AuthController{
     }
 
     @Put('user/register')
-    async userRegister(@Body() data:userRegistrationDto)
+    async userRegister(@Body() data:UserRegistrationDto)
     {
         return await this.userService.register(data);
     }
@@ -93,7 +94,7 @@ export class AuthController{
         jwtData.ip = req.ip.toString();
         jwtData.ua = req.headers["user-agent"];
 
-        let token:string = jwt.sign(jwtData.toPlainObject()  , jwtSecret);
+        let token:string = jwt.sign(jwtData.toPlainObject(), jwtSecret);
         const responseObject = new LoginInfoDto(
             user.userId,
             user.email,

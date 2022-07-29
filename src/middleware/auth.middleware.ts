@@ -18,7 +18,6 @@ export class AuthMiddleware implements NestMiddleware{
     
     async use(req: Request, res: Response, next: NextFunction) {
         
-        
         if(!req.headers.authorization){
             throw new HttpException('Token not found', HttpStatus.UNAUTHORIZED);
         }
@@ -54,8 +53,8 @@ export class AuthMiddleware implements NestMiddleware{
         if(jwtData.ua !== req.headers["user-agent"]){
             throw new HttpException('Bad token found', HttpStatus.UNAUTHORIZED);
         }
-
-        if(jwtData.role ==="administator"){
+            
+        if(jwtData.role === "administrator"){
             const administrator = await this.administratorService.getById(jwtData.id)
             if(!administrator){
                 throw new HttpException('Account not found', HttpStatus.UNAUTHORIZED);
@@ -66,16 +65,13 @@ export class AuthMiddleware implements NestMiddleware{
                 throw new HttpException('Account not found', HttpStatus.UNAUTHORIZED);
             }
         }
-
-        
-
-         
+  
         const trenutniTimestamp = new Date().getTime()/1000;
-
         if(trenutniTimestamp >= jwtData.exp){
             throw new HttpException('The token has expired', HttpStatus.UNAUTHORIZED)
         }
 
+        req.token = jwtData;  
  
         next();
     }
