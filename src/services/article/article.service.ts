@@ -66,10 +66,10 @@ export class ArticleService extends TypeOrmCrudService<Article>{
         const existingArticle:Article = 
         await this.article.findOne({where:
             {articleId:articleId},
-            relations: {
-                articlePrices:true,
-                articleFeatures:true
-            },
+            relations: [
+                "articlePrices",
+                "articleFeatures"
+            ],
         });
         
         if(!existingArticle){
