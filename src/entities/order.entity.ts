@@ -1,10 +1,10 @@
-import { Column, Entity, Index, JoinColumn, OneToOne } from "typeorm";
+import { Column, Entity, Index, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { Cart } from "./cart.entity";
 
 @Index("uq_order_cart_id", ["cartId"], { unique: true })
 @Entity("order")
 export class Order {
-  @Column("int", { primary: true, name: "order_id", unsigned: true })
+  @PrimaryGeneratedColumn({ type: "int", name: "order_id", unsigned: true })
   orderId: number;
 
   @Column("timestamp", {
