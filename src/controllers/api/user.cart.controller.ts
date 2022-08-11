@@ -7,11 +7,15 @@ import { Request } from "express";
 import { AddArticleToCartDto } from "src/dtos/cart/add.article.to.cart.dto";
 import { EditAdministratorDto } from "src/dtos/administrator/edit.administrator.dto";
 import { EditArticleInCartDto } from "src/dtos/cart/edit.article.in.cart.dto";
+import { Order } from "src/entities/order.entity";
+import { OrderService } from "src/services/order/order.service";
+import { ApiResponse } from "src/misc/api.response.class";
 
 @Controller('api/user/cart')
 export class UserCartController{
     constructor(
-        private cartService:CartService
+        private cartService:CartService,
+        private orderService:OrderService,
     )
     {}
 
@@ -30,10 +34,8 @@ export class UserCartController{
     @Get()
     @UseGuards(RoleCheckedGuard)
     @AllowToRoles('user')
-    
     async getCurrentCart(@Req() req:Request):Promise<Cart>{
-            return await this.getActiveCartForUserId(req.token.id)
-
+        return await this.getActiveCartForUserId(req.token.id);
     }
 
 
@@ -42,7 +44,6 @@ export class UserCartController{
     @AllowToRoles('user')
     async addToCart(@Body() data:AddArticleToCartDto, @Req() req:Request):Promise<Cart>{
         const cart = await this.getActiveCartForUserId(req.token.id);
-
         return await this.cartService.addArticleToCart(cart.cartId, data.articleId,data.quantity);
     }
 
@@ -54,4 +55,11 @@ export class UserCartController{
         return await this.cartService.changeQuantity(cart.cartId, data.articleId,data.quantity)
     }
 
+    @Post('makeOrder')
+    @UseGuards(RoleCheckedGuard)
+    @AllowToRoles('user')
+    async makeOrder(@Req() req:Request):Promise<Order | ApiResponse>{
+        const cart = await this.getActiveCartForUserId(req.token.id);
+        return await this.orderService.add(cart.cartId);
+    }
 }

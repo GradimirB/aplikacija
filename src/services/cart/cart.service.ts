@@ -45,8 +45,10 @@ export class CartService {
             return null;
         }
         
+        console.log(cart);
         return cart;
     }
+
 
     async createNewCartForUser(userId:number): Promise<Cart>{
         const newCart:Cart = new Cart();
@@ -66,14 +68,16 @@ export class CartService {
             record.cartId = cartId;
             record.articleId = articleId;
             record.quantity = quantity;
-            record = await this.cartArticle.save(record);
+             
         } else {
             record.quantity += quantity;
         }
 
-        await this.cartArticle.save(record);
+        await this.cartArticle.save(record)
 
         return this.getById(cartId);
+
+    
     }
 
     async getById(cartId:number):Promise<Cart> {
@@ -83,6 +87,7 @@ export class CartService {
             "user",
             "cartArticles.article",
             "cartArticles.article.category",
+            "cartArticles.article.articlePrices"
         ]});
     }
 
@@ -91,11 +96,11 @@ export class CartService {
             cartId:cartId,
             articleId:articleId,
         }});
-
+        console.log(record)
         if(record){
             record.quantity = newQuantity;
 
-            if(record.quantity ===0){
+            if(record.quantity === 0){
                 await this.cartArticle.delete(record.cartArticleId);
             }else{
                 await this.cartArticle.save(record);
