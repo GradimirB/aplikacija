@@ -17,11 +17,12 @@ export class Administrator {
     length: 32,
     default: () => "'0'",
   })
-  @Validator.IsNotEmpty()
-  @Validator.IsString()
-  @Validator.Matches(/^[a-z][a-z0-9\.]{,30}[a-z0-9]$/)
+  
   username: string;
 
+  @Validator.IsNotEmpty()
+  @Validator.IsString()
+  @Validator.Matches(/^[a-z][a-z0-9\.]{3,30}[a-z0-9]$/)
   @Column("varchar", {
     name: "password_hash",
     length: 128,

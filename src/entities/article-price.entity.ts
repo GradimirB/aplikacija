@@ -38,10 +38,11 @@ export class ArticlePrice {
   })
   createdAt: Date;
 
-  @ManyToOne(() => Article, (article) => article.articlePrices, {
-    onDelete: "RESTRICT",
-    onUpdate: "CASCADE",
-  })
+  @ManyToOne(
+    () => Article,
+    article => article.articlePrices,
+    { onDelete: "NO ACTION", onUpdate: "CASCADE" }
+  )
   @JoinColumn([{ name: "article_id", referencedColumnName: "articleId" }])
   article: Article;
 }
